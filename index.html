@@ -524,8 +524,12 @@
             .device-name { font-size: 0.8rem; }
             .drop-zone { padding: 0.5rem; min-height: 120px; }
             
-            /* Hilangkan deskripsi di HP untuk menghemat ruang */
-            .zone-label { display: none !important; } 
+            /* PERBAIKAN: Label zona diaktifkan kembali dan dikecilkan agar muat */
+            .zone-label { 
+                font-size: 0.7rem; /* Kecilkan ukuran font agar muat */
+                display: block !important; /* Pastikan ia tampil */
+                margin: 0;
+            } 
             
             .device-item.dragging .device-name { font-size: 0.7rem; }
             
@@ -544,7 +548,9 @@
                 min-height: 60px;
             }
             .drop-zone.filled .device-name {
-                 display: none; /* Sembunyikan nama di HP saat terisi untuk sangat ringkas */
+                 /* PERBAIKAN: Nama perangkat yang sudah terpasang diaktifkan kembali */
+                 display: block; 
+                 font-size: 0.75rem; 
             }
         }
     </style>
